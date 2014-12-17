@@ -1,4 +1,28 @@
-<!--
-Usa este archivo para tu proyecto. No olvides hacer
-la estructura correta y guardar TODO tu CSS en el archivo styles.css
- -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Frontend KnockoutJS - Basic</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="jumbotron">
+					<h1><strong>Title:</strong> Basic</h1>
+					<div class="descriptionDiv">
+						<h4><strong>Description: </strong>As a developer you should be able to bind data from input fields to html tags.</h4>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<p>Type something: <input data-bind='value: inputSomething, valueUpdate:"afterkeydown"' placeholder="something here"/></p> 
+				<h2><p>Your input result is:</p> "<span data-bind='text: inputResult'> </span>"</h2>
+			</div>
+		</div>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="http://knockoutjs.com/downloads/knockout-3.2.0.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>

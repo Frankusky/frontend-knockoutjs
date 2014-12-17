@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Frontend KnockoutJS - Lists</title>
+		<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="jumbotron">
+					<h1><strong>Title: </strong>People Collections</h1>
+					<div class="descriptionDiv">
+						<h4><strong>Description: </strong><br>As a user I must be able to display a minimum of 3 peoples, each with 3 children as a list. (use ko.observableArray) Example:
+							<ol>
+								<li>Isabel tiene 3 hijos:</li>
+									<ul>
+										<li>Diego</li>
+										<li>Fernando</li>
+										<li>Jose</li>
+									</ul>
+								<li>Ines tiene 4 hijos:</li>
+									<ul>
+										<li>Juan</li>
+										<li>Pedro</li>
+										<li>Maria</li>
+									</ul>
+							</ol>As a user I must be able to add a child to any person in the people list.</h4>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<h2>People</h2>
+				<ul data-bind="foreach: people" class="people">
+					<li>
+						<div>
+							<span data-bind="text: name"> </span> has <span data-bind='text: children().length'></span> children:
+							
+						</div>
+						<ul data-bind="foreach: children">
+							<li>
+								<span data-bind="text: $data"> </span>
+							</li>
+						</ul>
+						<p>Add item:</p> <input type="text" data-bind='value:itemToAdd' />
+						<button type="submit" data-bind="click: addChild">Add</button>
+					</li>
+
+				</ul>
+
+			</div>
+		</div>
+		<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="http://knockoutjs.com/downloads/knockout-3.2.0.js"></script>
+		<script type="text/javascript" src="../js/script_collections.js"></script>
+	</body>
+</html>
